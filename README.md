@@ -17,13 +17,23 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
+Real world recommendations work by combining user behavior like the songs they listen to, whether they skip or save the song.This also looks at the mood of the song lyrics the user likes and gives song recommendations of the same mood. This relies on different features like genre and even the artist that the user likes to listen to. My version will prioritize using features genre, mood, energy, tempo_bpm, valence, danceability and acousticness to predict a user's preferred music type.
+
 Explain your design in plain language.
+
+The first step Input collects the user's profile like favorite genres, moods, and energy music they prefer. Then for each song in the CSV dataset, this will compare all the songs with the user's preferences and each song will get scored based on how well it matches the user's profile. After scoring every song, the system sorts the scores from greatest to lowest and returns the top scores for user recommendations. For the "Algorithmic Recipe" the system will prioritize the genre song's than any of the other features.
 
 Some prompts to answer:
 
 - What features does each `Song` use in your system
   - For example: genre, mood, energy, tempo
+
+The features each `Song` will use are genre, mood, energy, tempo_bpm, valence, danceability and acousticness.
+
 - What information does your `UserProfile` store
+
+This should store the user's preferences like preferred genres, mood and values for the numerical features.
+
 - How does your `Recommender` compute a score for each song
 - How do you choose which songs to recommend
 
@@ -209,3 +219,6 @@ A few sentences about what you learned:
 - How did building this change how you think about real music recommenders
 - Where do you think human judgment still matters, even if the model seems "smart"
 
+
+<img src="src/songrecommendations.png">
+<img src="src/songrecommendations2.png">
