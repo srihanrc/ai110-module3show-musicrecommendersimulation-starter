@@ -243,5 +243,5 @@ A few sentences about what you learned:
 
 I learnt how even though it may seem that the system worked successfully and the top 5 song recommendations came out with good explanations for the scoring, there may be some bias the model undergoes when looking through the features. I noticed that the energy was the most dominant feature and the model would mostly rely on that to find top recommendations. This has made me realized that it is important to create test cases for the model in which creating edge cases helps to make sure the model is fairly selecting top recommendation songs. If the edge cases fail, this proves that the model didn't do the scoring properly.
 
-<img src="src/songrecommendations.png">
-<img src="src/songrecommendations2.png">
+![alt text](image.png)
+![alt text](image-1.png)
