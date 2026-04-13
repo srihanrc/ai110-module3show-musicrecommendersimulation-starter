@@ -13,6 +13,24 @@ from src.recommender import load_songs, recommend_songs
 
 
 def main() -> None:
+    """
+    Execute the music recommendation system workflow.
+    This function orchestrates the complete recommendation pipeline:
+    1. Loads songs from a CSV data file
+    2. Defines user preferences including favorite genres, moods, audio features,
+       tempo ranges, and preferred artists
+    3. Generates song recommendations using a scoring algorithm
+    4. Displays the top 5 recommended songs in a formatted table with:
+       - Rank number and song title/artist
+       - Numerical score (0-7.0) with visual progress bar
+       - Song metadata (genre, mood, energy level)
+       - Reasons why each song was recommended
+    The scoring system awards points based on how well each song matches user
+    preferences across multiple dimensions (genre, mood, audio features, artists).
+    Songs are ranked by their total match score in descending order.
+    Returns:
+        None
+    """
     songs = load_songs("data/songs.csv")
     print(f"Loaded {len(songs)} songs\n")
 
